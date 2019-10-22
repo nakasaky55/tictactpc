@@ -20,3 +20,62 @@
 .App-link {
   color: #09d3ac;
 }
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px ridge #1C6EA4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.board {
+  display: flex;
+  width: 308px;
+  height: 310px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.square:hover {
+  cursor: pointer;
+  background-color: grey;
+  color: white;
+}
+
+.black {
+  color: white;
+  background-color: red;
+  border: white 1px solid;
+}
+
+.X {
+  background-image: url("./img/cross.svg");
+  background-size: contain;
+}
+
+.O {
+  background-image: url("./img/circle.svg");
+  background-size: contain;
+}
+
+.blackX {
+  background-image: url("./img/crossWhite.svg");
+  background-size: contain;
+  background-color: black;
+  transition: 1s ease-in;
+}
+
+.blackO {
+  background-image: url("./img/circleWhite.svg");
+  background-size: contain;
+  background-color: black;
+  transition: 1s ease-in-out;
+}
+
+li {
+  margin: 7px 0;
+}
