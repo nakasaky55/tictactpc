@@ -1,3 +1,36 @@
+body {
+  background-color: #6b2d5c;
+  color: white;
+  text-align: center;
+}
+
+.highscore {
+  color: orange;
+  font-weight: bold;
+}
+
+.custom-table {
+  width: 60%;
+  margin: 0 auto;
+}
+
+tr,
+td {
+  color: white;
+}
+
+.row-hover:hover {
+  background-color: #f0386b;
+  border: 1px solid #6b2d5c;
+  transition: 0.5s ease;
+}
+
+.board-container {
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+}
+
 .App {
   text-align: center;
 }
@@ -21,20 +54,35 @@
   color: #09d3ac;
 }
 
+.custom-btn {
+  background-color: #6b2d5c;
+  color: white;
+  border: 1px solid white;
+  transition: 0.5s ease;
+}
+
+.custom-btn:hover {
+  background-color: #f0386b;
+  border: 1px solid #6b2d5c;
+  transition: 0.5s ease;
+}
+
 .square {
   width: 100px;
   height: 100px;
-  border: 1px ridge #1C6EA4;
+  border: 1px solid white;
+  background-color: #6b2d5c;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  margin-bottom: 0;
 }
 
 .board {
   display: flex;
-  width: 308px;
-  height: 310px;
+  width: 300px;
+  height: 300px;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -42,7 +90,7 @@
 
 .square:hover {
   cursor: pointer;
-  background-color: grey;
+  /* background-color: rgb(211, 211, 211); */
   color: white;
 }
 
@@ -52,30 +100,67 @@
   border: white 1px solid;
 }
 
+.X-hover:hover {
+  background-image: url("./img/delete.svg");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: 0.3s ease-in-out;
+}
+.O-hover:hover {
+  background-image: url("./img/circle.svg");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: 0.3s ease-in-out;
+}
+
 .X {
-  background-image: url("./img/cross.svg");
-  background-size: contain;
+  background-image: url("./img/delete.svg");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .O {
   background-image: url("./img/circle.svg");
-  background-size: contain;
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .blackX {
-  background-image: url("./img/crossWhite.svg");
-  background-size: contain;
-  background-color: black;
+  background-image: url("./img/deleteWhite.svg");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #f0386b;
   transition: 1s ease-in;
 }
 
 .blackO {
   background-image: url("./img/circleWhite.svg");
-  background-size: contain;
-  background-color: black;
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #f0386b;
   transition: 1s ease-in-out;
 }
 
 li {
   margin: 7px 0;
+}
+
+.highscore-table {
+  text-align: center;
+  list-style: none;
+}
+
+.result {
+  text-align: center;
+}
+
+.reset-btn {
+  display: block;
+  margin: 10px auto;
 }
